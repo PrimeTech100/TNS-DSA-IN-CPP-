@@ -1,58 +1,67 @@
 #include <iostream>
+using namespace std;
 class Node
-{
-    int data;
-    Node *next;
-};
-class Linklist 
 {
     public:
     int data;
+    
     Node *next;
-        Node(int no)
-        {
-            data = no;
-            next = NULL;
-        }
+    Node(int no)
+    {
+    data= no;
+    next = NULL;
+    }
 };
-class linklist
+class LinkedList
 {
-    public:Linklist
-    (    
-        Node *head;
+    Node *head;
+    public:
+    LinkedList()
+    {
+        head= NULL;
+    }
+    void create()
+    {
+        int no;
+        Node *newnode, *t;
+        std::cout<<"enter the number upto 999";
+        std::cin>>no;
+        while(no != 999)
         {
-            head = NULL;
+         newnode = new Node(no);
+         if(head == NULL)
+         head = newnode;
+         else
+         {
+             t=head;
+             while(t->next != NULL)
+             
+                 t=t->next;
+         t->next= newnode;
+    
+         }
+         std::cin>>no;
         }
-        void create()
+    }
+    void display()
+    {
+        Node *C = head;
+        while(C!= NULL)
         {
-            int no;
-            std::cout<<"Enter the no. up to 999..";
-            std::cin>>no;
-            while(no != 999)
-            {
-                Node *newnode = new Node(no);
-                if(head == NULL)
-                {
-                    head = newnode;
-                }
-                else
-                {
-                    Node *temp = head;
-                    while(t->next != NULL)
-                    {
-                        temp = t->next;
-                    }
-                    t->next = newnode;
-                }
-                std::cout<<"Enter the no. up to 999..";
-                std::cin>>no;
-            }
+            std::cout<<C-> data<<"->";
+            C=C->next;
+            
         }
-    )
+        
+    }
+    
 };
 int main()
 {
-    std::cout<<"sing linklist..";
-    Linklist list;
+    std::cout<<" singly list";
+    LinkedList list;
     list.create();
+    std::cout<<"\n list as follow:";
+    list.display();
+    return 0;
 }
