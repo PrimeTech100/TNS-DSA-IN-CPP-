@@ -6,9 +6,9 @@ class Node
 };
 class Linklist 
 {
+    public:
     int data;
     Node *next;
-    public:
         Node(int no)
         {
             data = no;
@@ -17,8 +17,9 @@ class Linklist
 };
 class linklist
 {
-    Node *head;
-    public:Linklist(
+    public:Linklist
+    (    
+        Node *head;
         {
             head = NULL;
         }
@@ -52,4 +53,6 @@ class linklist
 int main()
 {
     std::cout<<"sing linklist..";
+    Linklist list;
+    list.create();
 }
