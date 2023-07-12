@@ -37,16 +37,19 @@ class linklist
                 else
                 {
                     Node *temp = head;
-                    while(temp->next != NULL)
+                    while(t->next != NULL)
                     {
-                        temp = temp->next;
+                        temp = t->next;
                     }
-                    temp->next = newnode;
+                    t->next = newnode;
                 }
                 std::cout<<"Enter the no. up to 999..";
                 std::cin>>no;
             }
         }
-
     )
 };
+int main()
+{
+    std::cout<<"sing linklist..";
+}
