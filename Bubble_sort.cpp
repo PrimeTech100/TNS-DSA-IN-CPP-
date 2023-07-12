@@ -2,8 +2,8 @@
 using namespace std;
 int main()
 {
-    int n, i, arr[50], j, temp;
-    cout<<"Enter the Size (max. 50): ";
+    int n, i, arr[5], j, demo;
+    cout<<"Enter the Size (max. 5): ";
     cin>>n;
     cout<<"Enter "<<n<<" Numbers: ";
     for(i=0; i<n; i++)
@@ -15,9 +15,9 @@ int main()
         {
             if(arr[j]>arr[j+1])
             {
-                temp = arr[j];
+                demo = arr[j];
                 arr[j] = arr[j+1];
-                arr[j+1] = temp;
+                arr[j+1] = demo;
             }
         }
     }
