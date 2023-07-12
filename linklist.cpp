@@ -49,12 +49,10 @@ class LinkedList
         while(C!= NULL)
         {
             std::cout<<C-> data<<"->";
-            C=C->next;
-            
+            C=C->next; 
         }
-        
     }
-    
+
 };
 int main()
 {
